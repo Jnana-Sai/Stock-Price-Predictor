@@ -36,7 +36,7 @@ for i in range(60,len(train)):
     y_train.append(scaled_data[i,0])
 x_train,y_train=np.array(x_train),np.array(y_train)
 x_train=np.reshape(x_train,(x_train.shape[0],x_train.shape[1],1))
-model = tf.keras.models.load_model('stock_price_pred.h5')
+model = tf.keras.models.load_model('Model.h5')
 inputs=new_data[len(new_data)-len(valid)-60:].values
 inputs=inputs.reshape(-1,1)
 inputs=scaler.transform(inputs)
